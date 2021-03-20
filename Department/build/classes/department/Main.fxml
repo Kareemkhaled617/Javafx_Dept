@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="1063.0" style="-fx-background-color: #151515;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="department.MainController">
+   <children>
+      <TextField id="userfield" fx:id="Deptname" layoutX="252.0" layoutY="238.0" promptText="Deptname" style="-fx-border-color: black;">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </TextField>
+      <TextField id="userfield" fx:id="Address" layoutX="252.0" layoutY="337.0" promptText="Address" style="-fx-border-color: black;">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </TextField>
+      <TextField id="userfield" fx:id="Age" layoutX="252.0" layoutY="283.0" promptText="age" style="-fx-border-color: black;">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="table" layoutX="524.0" layoutY="186.0" onMouseClicked="#clickTable" prefHeight="303.0" prefWidth="539.0" style="-fx-background-color: #c8eed9;">
+         <columns>
+            <TableColumn fx:id="col_id" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="col_dept" prefWidth="191.0" text="Deptname" />
+            <TableColumn fx:id="col_age" prefWidth="99.0" text="Age" />
+            <TableColumn fx:id="col_address" prefWidth="173.0" text="Address" />
+         </columns>
+      </TableView>
+      <Label layoutX="21.0" layoutY="238.0" prefHeight="35.0" prefWidth="144.0" text="Name" textFill="#ffcdcd">
+         <font>
+            <Font name="Bodoni MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="337.0" prefHeight="35.0" prefWidth="144.0" text="Address" textFill="#ffcdcd">
+         <font>
+            <Font name="Bodoni MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="283.0" prefHeight="35.0" prefWidth="144.0" text="Age" textFill="#ffcdcd">
+         <font>
+            <Font name="Bodoni MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="280.0" layoutY="407.0" mnemonicParsing="false" onAction="#Update" prefHeight="49.0" prefWidth="160.0" style="-fx-background-color: #810000;" text="UBDATE" textAlignment="CENTER" textFill="#f4f5db">
+         <font>
+            <Font name="Arial" size="26.0" />
+         </font>
+      </Button>
+      <Button layoutX="31.0" layoutY="407.0" mnemonicParsing="false" onAction="#Add" prefHeight="48.0" prefWidth="141.0" style="-fx-background-color: #810000;" text="ADD" textAlignment="CENTER" textFill="#f4f5db">
+         <font>
+            <Font name="Arial" size="26.0" />
+         </font>
+      </Button>
+      <Button layoutX="155.0" layoutY="495.0" mnemonicParsing="false" onAction="#delete" prefHeight="48.0" prefWidth="141.0" style="-fx-background-color: #810000;" text="DELETE" textAlignment="CENTER" textFill="#f4f5db">
+         <font>
+            <Font name="Arial" size="26.0" />
+         </font>
+      </Button>
+      <Button layoutX="922.0" layoutY="520.0" mnemonicParsing="false" onAction="#Exit" prefHeight="48.0" prefWidth="141.0" style="-fx-background-color: #810000;" text="Exit" textAlignment="CENTER" textFill="#f4f5db">
+         <font>
+            <Font name="Arial" size="26.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="196.0" fitWidth="212.0" layoutX="426.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/img.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <Label layoutX="21.0" layoutY="186.0" prefHeight="35.0" prefWidth="144.0" text="ID" textFill="#ffcdcd">
+         <font>
+            <Font name="Bodoni MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField id="userfield" fx:id="id" layoutX="252.0" layoutY="186.0" promptText="id" style="-fx-border-color: black;">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </TextField>
+      <Button layoutX="879.0" layoutY="14.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #fed049;" text="About Us" textAlignment="CENTER" textFill="#f3ffe9">
+         <font>
+            <Font name="Arial" size="26.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
